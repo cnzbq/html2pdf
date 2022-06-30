@@ -1,0 +1,1190 @@
+/* 统一样式 */
+html {
+  background-color: aliceblue;
+  --primary-color: #24abe3;
+  color: #333;
+  font-size: 14px;
+}
+
+html,
+body,
+div,
+img,
+ol,
+ul,
+li,
+p,
+span {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+/* 默认是pc端  页面容器 */
+.page-container {
+  position: relative;
+  margin: 0 auto 20px;
+  padding: 0 40px;
+  width: 595px;
+  height: 842px;
+  background-color: #fff;
+}
+
+/* 第一页 */
+.page-container:first-child {
+  padding: 0;
+}
+
+/* 第二页 目录 */
+.page-container:nth-child(2) {
+  padding: 60px;
+  padding-bottom: 0;
+}
+
+/* 3页及其以后的页面*/
+.page-container:nth-child(n + 3) {
+  padding-top: 10px;
+}
+
+/* 页面头部的机构和页码 */
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 0;
+  padding: 5px;
+  border-bottom: 1px solid #555;
+  font-size: 16px;
+}
+
+/* 机构名字 */
+.page-header .page-header-name {
+  color: #666;
+}
+
+/* 页码 */
+.page-header .page-header-num {
+  color: #333;
+}
+
+/* 页面body */
+.page-body {
+  margin-top: 15px;
+}
+
+/* 一级标题 */
+.page-title {
+  color: #000;
+  font-size: 24px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+/* 页面组 */
+.page-section {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+/* 二级标题 */
+.section-title {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+/* 组的内容 */
+.section-content {
+  font-size: 14px;
+  text-indent: 2em;
+  line-height: 24px;
+  margin-bottom: 10px;
+}
+
+/* 表格标题 */
+.table-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 36px;
+  border-top: 1px solid var(--primary-color);
+  border-bottom: 1px solid var(--primary-color);
+  background-color: #def3fb;
+}
+/* ---------- 第一页 封面 -----------*/
+
+/* 顶部图片 */
+.cover-header {
+  width: 100%;
+}
+
+/*标题框  */
+.cover-title {
+  color: var(--primary-color);
+  text-align: center;
+  font-weight: bold;
+  margin-top: -40px;
+}
+
+/* 主标题 */
+.cover-title-main {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+/* 副标题 */
+.cover-title-sub {
+  font-size: 12px;
+}
+
+/* 报告信息 */
+.report-info-list {
+  margin: 60px auto 0;
+  width: 330px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #555;
+}
+
+/* 每一项 */
+.report-info-item {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+/* 每一项中的标题 */
+.report-info-item span:first-child {
+  flex-basis: 80px;
+  text-align: right;
+}
+
+/*   每一项中的内容*/
+.report-info-item span:last-child {
+  flex: 1;
+  margin-left: 20px;
+  padding-left: 20px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #aaa;
+}
+
+/*  底部图片*/
+.cover-footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+/* 底部背景图 */
+.cover-footer-bg {
+  width: 100%;
+}
+
+/* ---------- 第二页 目录 -----------*/
+/* 头部 */
+.catalog-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 矩形4个框  */
+.catalog-frame {
+  display: flex;
+  height: 60px;
+}
+
+/* 矩形框的每个子元素 */
+.catalog-frame li {
+  margin-right: 1px;
+}
+
+/* 第一个子元素 */
+.catalog-frame li:first-child {
+  background-color: #2aacfa;
+  width: 36px;
+}
+
+/* 第二个子元素 */
+.catalog-frame li:nth-child(2) {
+  background-color: #4ab8fb;
+  width: 30px;
+}
+
+/* 第三个子元素 */
+.catalog-frame li:nth-child(3) {
+  background-color: #74c9fc;
+  width: 20px;
+}
+
+/* 第四个子元素 */
+.catalog-frame li:last-child {
+  background-color: #9fd9fd;
+  width: 15px;
+}
+
+/* 目录右边的4个框 */
+.catalog-frame-reverse {
+  transform: rotate(180deg);
+}
+
+/* 目录（第二个子元素） */
+.catalog-header span:nth-child(2) {
+  padding: 0 40px;
+  color: var(--primary-color);
+  font-weight: bold;
+  font-size: 24px;
+}
+
+/* 内容 */
+.catalog-body {
+  margin-top: 60px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* 目录item */
+.catalog-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+/*  最后一条item*/
+.catalog-item:last-child {
+  margin-bottom: 0;
+}
+
+/* .....*/
+.catalog-item span:nth-child(2) {
+  flex: 1;
+  border-bottom: 1px dashed #555;
+  margin: 0 10px;
+}
+
+/* ---------- 第三页 基本资料 -----------*/
+/* 表格行 */
+.info-table-row {
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  height: 34px;
+  border-bottom: 1px solid #86d0ef;
+}
+
+/* 表格列 */
+.table-colum {
+  display: flex;
+  flex: 1;
+}
+
+/* 表格列中的第一个元素 */
+.table-colum span:first-child {
+  margin-right: 40px;
+}
+
+/* 参检人员分布表格行 */
+.case-table-row {
+  display: flex;
+  align-items: center;
+  height: 34px;
+}
+
+/*年龄  */
+.case-table-row:first-child span {
+  flex-basis: 33.3%;
+  text-align: center;
+}
+
+/* 分类-统计 */
+.case-table-row:nth-child(2) {
+  padding: 0 20px;
+  height: 0;
+  justify-content: space-between;
+}
+
+/* 分类-统计中的线 */
+.case-table-row:nth-child(2) span:nth-child(2) {
+  flex: 1;
+  margin: 0 20px;
+  border-bottom: 1px solid #94d6f1;
+}
+
+/* 分类标题 */
+.case-table-row:nth-child(3) {
+  padding: 0 12.5%;
+  border-bottom: 1px solid #94d6f1;
+}
+
+/* 分类标题中的子元素 */
+.case-table-row:nth-child(3) span {
+  flex: 1;
+  text-align: center;
+}
+
+/* 男性、女性、合计行 */
+.case-table-row:nth-child(n + 4) span {
+  flex: 1;
+  text-align: center;
+}
+/* ---------- 第四页  基本资料->参检项目 -----------*/
+
+/* 年龄分布的图表 */
+#ageChart {
+  width: 100%;
+  height: 250px;
+  margin-bottom: 10px;
+}
+
+/* 参检项目表格的行 */
+.project-table-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 15px;
+  height: 34px;
+  border-bottom: 1px solid #94d6f1;
+}
+
+/* 第一列 */
+.project-table-row span:first-child {
+  flex: 1;
+}
+
+/* 第二及其以后的列 */
+.project-table-row span:nth-child(n + 2) {
+  flex: 2;
+}
+
+/* 参检人员性别分布饼图 */
+#sexDistChart {
+  margin-top: 10px;
+  width: 100%;
+  height: 200px;
+}
+
+/*  标题 */
+.sex-dist-title {
+  text-align: center;
+}
+
+/* --------第五页 基本资料->参检项目 ------------ */
+/*  神经网络模型容器 */
+.nerve-diagram-wrap {
+  margin-top: 10px;
+}
+
+/* 神经网络模型图片 */
+.nerve-diagram-img {
+  width: 100%;
+  height: 220px;
+}
+
+/* 神经网络模型标题 */
+.nerve-diagram-title {
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* --------第六页 疾病解释  ------------ */
+/*  解释组body  */
+.section-body {
+  display: flex;
+}
+
+/* 两个各占一半 */
+.section-content,
+.section-explain {
+  flex: 1;
+}
+
+/* 疾病解释文本 */
+.section-body .section-content {
+  line-height: 26px;
+}
+
+/* 抑郁症疾病解释 */
+.section-body .section-explain:nth-child(2) {
+  margin-left: 10px;
+}
+
+/* 焦虑症疾病解释 */
+.section-body .section-explain:first-child {
+  margin-right: 10px;
+}
+
+/* 疾病图片 */
+.explain-image {
+  width: 100%;
+}
+
+/*文字列表  */
+.explain-text-list {
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+/* 每个说明的item */
+.explain-text-list li {
+  margin-bottom: 15px;
+}
+
+/* 每个说明的item中的标题 */
+.explain-text-list li span:first-child {
+  margin-right: 48px;
+}
+
+/* 所属科室中的标题 */
+.explain-text-list li:nth-child(3) span:first-child {
+  margin-right: 20px;
+}
+
+/* --------第七页 整体健康状况  ------------ */
+
+/* 描述 */
+.section-desc {
+  margin-bottom: 10px;
+}
+
+/*  评估结果组*/
+.assess-result-section {
+  margin-bottom: 40px;
+}
+
+/* 焦虑结果标题 */
+.anxiety-result-title {
+  border-top: none;
+}
+
+/* 结果显示容器 */
+.test-result-wrap {
+  margin-top: 15px;
+}
+
+/* 结果显示标题 */
+.result-show-title {
+  color: #e86676;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* 结果指示容器 */
+.result-indicate-wrap {
+  position: relative;
+  width: 40px;
+  height: 40px;
+}
+
+/* 很差的样式 */
+.result-indicate-1 {
+  left: 6%;
+  top: 20px;
+  color: #e86676;
+}
+
+/* 差的样式 */
+.result-indicate-2 {
+  left: 26%;
+  top: 20px;
+  color: #f59a23;
+}
+
+/* 一般的样式 */
+.result-indicate-3 {
+  left: 46%;
+  top: 10px;
+  color: #fad437;
+}
+
+/* 较好的样式 */
+.result-indicate-4 {
+  left: 66%;
+  top: 0;
+  color: #36a2ff;
+}
+
+/* 很好的样式 */
+.result-indicate-5 {
+  left: 86%;
+  top: -10px;
+  color: #4ecb73;
+}
+
+/* 图标的颜色 */
+.result-indicate-wrap .iconfont {
+  font-size: 40px;
+}
+
+/* 结果显示列表 */
+.result-show-list {
+  display: flex;
+  border-bottom: 1px solid #94d6f1;
+}
+
+/* 每个结果item */
+.result-show-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  justify-content: flex-end;
+}
+
+/* 结果item中的实体柱 */
+.result-show-item span:nth-child(2) {
+  margin-top: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  width: 100%;
+}
+
+/* 第一个很差 */
+.result-item-1 {
+  height: 40px;
+  background-color: #e86676;
+}
+
+/* 第二个差 */
+.result-item-2 {
+  height: 55px;
+  background-color: #f59a23;
+}
+
+/* 第三个一般 */
+.result-item-3 {
+  height: 70px;
+  background-color: #fad437;
+}
+
+/* 第四个较好 */
+.result-item-4 {
+  height: 85px;
+  background-color: #36a2ff;
+}
+
+/* 第五个很好 */
+.result-item-5 {
+  height: 100px;
+  background-color: #4ecb73;
+}
+
+/* -------- 第八页 各员工人工智能心理健康报告单  ------------ */
+/* 中间的标题 */
+.page-center-title {
+  margin-top: 10px;
+  color: #000;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* 员工风险概率 */
+.staff-risk-prob {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+/* 员工风险概率中li */
+.staff-risk-prob li {
+  margin-right: 10px;
+}
+
+/* 奇数个 */
+.staff-risk-prob li:nth-child(even) {
+  color: var(--primary-color);
+}
+
+/* 风险概率显示容器 */
+.risk-show-wrap {
+  margin-top: 10px;
+}
+
+/*  风险指示容器 */
+.risk-indicate-wrap {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  margin-top: 20px;
+}
+
+/* 未发现的样式 */
+.risk-indicate-1 {
+  left: 15%;
+  color: #4ecb73;
+}
+
+/* 倾向人群的样式 */
+.risk-indicate-2 {
+  left: 48%;
+  color: #f59a23;
+}
+
+/* 疑似人群的样式 */
+.risk-indicate-3 {
+  left: 80%;
+  color: #e86676;
+}
+
+/* 图标的颜色 */
+.risk-indicate-wrap .iconfont {
+  font-size: 28px;
+}
+
+/* 显示列表 */
+.risk-show-list {
+  display: flex;
+  margin-top: 10px;
+}
+
+/* 显示item */
+.risk-show-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+/* 显示item的实体柱 */
+.risk-show-item span:first-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 25px;
+  width: 100%;
+  color: #fff;
+  margin-bottom: 2px;
+}
+
+/* 未发现柱 */
+.risk-item-pillar-1 {
+  background-color: #4ecb73;
+}
+
+/* 未发现下方文字 */
+.risk-item-text-1 {
+  color: #4ecb73;
+}
+
+/* 倾向人群柱 */
+.risk-item-pillar-2 {
+  background-color: #f59a23;
+}
+
+/* 倾向人群下方文字 */
+.risk-item-text-2 {
+  color: #f59a23;
+}
+
+/* 疑似人群柱 */
+.risk-item-pillar-3 {
+  background-color: #e86676;
+}
+
+/* 疑似人群下方文字 */
+.risk-item-text-3 {
+  color: #e86676;
+}
+
+/* ai报告单 */
+.ai-report {
+  margin-top: 20px;
+  width: 100%;
+  height: 600px;
+}
+
+/* -------- 第九页 抑郁风险分析及建议  ------------ */
+/* 分布表格 */
+.dist-table {
+  border-bottom: 1px solid var(--primary-color);
+}
+
+/*分布表格行  */
+.dist-table-row {
+  display: flex;
+  align-items: center;
+  height: 35px;
+}
+
+/* 第一行 */
+.dist-table-row:first-child {
+  margin-left: 25%;
+}
+
+/* 第一行中的每个元素 */
+.dist-table-row:first-child span {
+  flex: 1;
+  text-align: center;
+}
+
+/* 第二行 */
+.dist-table-row:nth-child(2) {
+  height: 0;
+}
+
+/* 第二行中的分类 */
+.dist-table-row:nth-child(2) span:first-child {
+  flex-basis: 25%;
+  text-align: center;
+}
+
+/* 第二行中的线 */
+.dist-table-row:nth-child(2) span:last-child {
+  flex: 1;
+  border-bottom: 1px solid #9ed9f2;
+}
+
+/* 第三行 */
+.dist-table-row:nth-child(3) {
+  padding-left: 25%;
+  border-bottom: 1px solid #9ed9f2;
+}
+
+/* 第三行中的每个元素 */
+.dist-table-row:nth-child(3) span {
+  flex: 1;
+  text-align: center;
+}
+
+/* 第4行以及以后中的子元素 */
+.dist-table-row:nth-child(n + 4) span {
+  flex: 1;
+  text-align: center;
+}
+
+/* 第4行以及以后中的第一个子元素 */
+.dist-table-row:nth-child(n + 4) span:first-child {
+  flex: 2;
+  text-align: left;
+  font-size: 13px;
+}
+
+/* 抑郁症，焦虑结果分布饼图 */
+#depressionDistChart,
+#anxietyDistChart {
+  width: 100%;
+  height: 220px;
+  margin-top: 10px;
+}
+
+/* 不同性别分布标题 */
+.sex-dist-title {
+  position: relative;
+}
+
+/* 图表的图例 */
+.diff-sex-dist {
+  display: flex;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 12px;
+}
+
+/* 性别分布item */
+.sex-dist-item {
+  display: flex;
+  align-items: center;
+  margin-right: 5px;
+}
+
+/* 小方块 */
+.sex-dist-item span:first-child {
+  width: 8px;
+  height: 8px;
+  margin-right: 2px;
+}
+
+/* 男性 */
+.sex-dist-1 {
+  background-color: #0f7ef4;
+}
+
+/* 女性 */
+.sex-dist-2 {
+  background-color: #ed808d;
+}
+
+/* 合计 */
+.sex-dist-3 {
+  background-color: #fad437;
+}
+
+/* 性别评估柱状图 */
+#depressionSexAssessChart,
+#anxietySexAssessChart {
+  margin-top: 10px;
+  width: 100%;
+  height: 200px;
+}
+/* -------- 第十页 评估建议和结果评价指标图 ------------ */
+/* 评估建议 */
+.assess-suggest {
+  margin-top: 5px;
+  text-indent: 2em;
+  line-height: 26px;
+}
+
+/* 结果评价指标图 */
+.evaluate-target-image {
+  margin-top: 20px;
+  width: 100%;
+  height: 210px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #9ed9f2;
+}
+
+/* 解释列表 */
+.explain-list {
+  margin-top: 20px;
+}
+
+/* 解释item */
+.explain-item {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+  margin-bottom: 20px;
+}
+
+/* 图标容器 */
+.explain-icon-view {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: #ecf5ff;
+  border-radius: 8px;
+}
+
+/* 图片 */
+.explain-icon-view img {
+  width: 24px;
+  height: 24px;
+}
+
+/*  右侧内容 */
+.explain-content {
+  margin-left: 20px;
+}
+
+/* 标题 */
+.explain-title {
+  color: #000;
+  font-size: 14px;
+}
+
+/* 子标题 */
+.explain-sub {
+  margin-top: 5px;
+  color: #999;
+  font-size: 12px;
+}
+
+/* --------第十一页 干预分析 ------------ */
+/* 蓝色的标题 */
+.section-blue-title {
+  margin-top: 30px;
+  color: #4296ce;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* --------第十二页  日常保健建议 ------------ */
+/* 不首行缩进的内容 */
+.section-left-content {
+  font-size: 14px;
+  line-height: 22px;
+  margin-bottom: 3px;
+}
+
+/* 饮食建议行 */
+.diet-row {
+  display: flex;
+  align-items: center;
+  height: 35px;
+  border-bottom: 1px solid #9ed9f2;
+}
+
+/* 第一行 */
+.diet-row:first-child {
+  background-color: #eef9fd;
+}
+
+/* 里面的子元素 */
+.diet-row div {
+  flex: 1;
+  padding-left: 50px;
+}
+
+/* 类型 */
+.diet-row div:first-child {
+  padding-left: 120px;
+  position: relative;
+}
+
+/* 图标 */
+.diet-row div:first-child .iconfont {
+  color: #24abe3;
+  font-size: 20px;
+  position: absolute;
+  left: 80px;
+  top: -2px;
+}
+
+/* table蓝色尾部 */
+.table-blue-footer {
+  text-align: center;
+  color: var(--primary-color);
+  font-size: 16px;
+  line-height: 22px;
+  padding: 6px 0;
+}
+/* -------- 第十三页 运动保健建议 ------------ */
+/* 运动方案table行 */
+.run-row {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  border-bottom: 1px solid #9ed9f2;
+  line-height: 28px;
+}
+
+/* 第一行 */
+.run-row:first-child {
+  background-color: #eef9fd;
+}
+
+/* 前三个 */
+.run-row span:nth-child(-n + 3) {
+  flex: 1;
+}
+
+/* 最后一个 */
+.run-row span:last-child {
+  flex: 2;
+}
+
+/*  运动演示列表*/
+.run-demo-list {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #9ed9f2;
+}
+
+/* 行为item */
+.run-action-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  line-height: 24px;
+  flex: 1;
+  text-align: center;
+  height: 100px;
+}
+
+/* 行为item中的图片 */
+.run-action-item .iconfont {
+  color: #4396df;
+  font-size: 45px;
+  margin-bottom: 5px;
+}
+
+/* -------- 第十四页 运动保健建议 ------------ */
+/*疲劳等级列表  */
+.tired-level-list {
+  display: flex;
+  font-size: 13px;
+}
+
+/* 每个item */
+.tired-level-list li {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 32px;
+}
+
+/* 第一个 */
+.tired-level-list li:first-child {
+  background-color: #a5e5b8;
+}
+
+/* 第二个 */
+.tired-level-list li:nth-child(2) {
+  background-color: #80da9b;
+}
+
+/* 第三个 */
+.tired-level-list li:nth-child(3) {
+  background-color: #fce37b;
+}
+
+/* 第四个 */
+.tired-level-list li:nth-child(4) {
+  background-color: #f8bc6c;
+}
+
+/* 第五个 */
+.tired-level-list li:nth-child(5) {
+  background-color: #f59a23;
+}
+
+/* 第六个 */
+.tired-level-list li:nth-child(6) {
+  background-color: #e25a48;
+}
+
+/* 最后个 */
+.tired-level-list li:last-child {
+  background-color: #dd3823;
+}
+
+/* 疲劳数值列表 */
+.tired-num-list {
+  display: flex;
+  align-items: center;
+  height: 32px;
+}
+
+/* 疲劳数值列表的item */
+.tired-num-list li {
+  flex: 1;
+  text-align: right;
+}
+
+/* 显示6的数值 */
+.tired-num-first {
+  position: absolute;
+  top: 172px;
+}
+
+/* -------- 第十五页 生活习惯建议 ------------ */
+
+/* 生活建议行 */
+.life-suggest-row {
+  display: flex;
+  align-items: center;
+  padding: 6px 10px;
+  border-bottom: 1px solid #9ed9f2;
+  line-height: 24px;
+}
+
+/* 序号 */
+.life-suggest-row span:first-child {
+  position: relative;
+  flex-basis: 60px;
+  text-align: center;
+  font-size: 16px;
+}
+
+/* 序号 */
+.life-suggest-row span:first-child::after {
+  content: "";
+  position: absolute;
+  left: 25px;
+  top: 10px;
+  width: 18px;
+  height: 18px;
+  background-color: #24abe3;
+  border-radius: 50%;
+  opacity: 0.8;
+}
+
+/* 建议内容 */
+.life-suggest-row span:last-child {
+  flex: 1;
+}
+
+/* -------- 第十六页 附录 ------------ */
+
+/* 名单人员行 */
+.roll-row {
+  display: flex;
+  align-items: center;
+  height: 35px;
+  border-bottom: 1px solid #9ed9f2;
+}
+
+/* 名单人员行的第一行 */
+.roll-row:first-child {
+  background-color: #eef9fd;
+}
+
+/* 名单人员行中的每一个子元素  */
+.roll-row span {
+  flex: 1;
+  text-align: center;
+}
+
+/* 相似人群行 */
+.simila-person-row span {
+  text-align: left;
+  padding-left: 30px;
+}
+
+/* -------- 第十八页 最后一页 ------------ */
+
+/* 最后一页 */
+.page-container:last-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 最后一页中的图片 */
+.page_last_image {
+  width: 90%;
+  height: 50px;
+}
+
+/* -------- 移动端适配 ------------ */
+
+/*  手机的屏幕大小 */
+@media screen and (max-width: 768px) {
+  /* 页面容器 */
+  .page-container {
+    width: 100vw;
+    height: 100vh;
+  }
+
+  /* 不是第一页 */
+  .page-container:nth-child(n + 2) {
+    padding: 15px 10px 0;
+  }
+
+  /* -------- 第一页 封面 ------------ */
+  /* 主标题 */
+  .cover-title-main {
+    font-size: 24px;
+  }
+
+  /* 副标题 */
+  .cover-title-sub {
+    margin-top: 10px;
+  }
+
+  /* 报告信息 */
+  .report-info-list {
+    width: 300px;
+  }
+}
+
+/*  376 - 480之间的手机屏幕 */
+@media screen and (min-width: 376px) and (max-width: 480px) {
+}
